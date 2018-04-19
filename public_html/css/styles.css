@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/03/2018, 07:54:59 AM
+    Author     : oym-dev06
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px;
+    background-color: beige;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+@media (min-width: 768px) {
+    .bootstrap-vertical-nav {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 768px) {
+    .bootstrap-vertical-nav .collapse {
+        display: block;
+        max-width: 1200px;
+    }
+}
+@media (min-width: 768px) {
+    .container{
+        max-width: 1500px;
+    }
+}
+
+.loader {
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.5s linear infinite;
+  
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
