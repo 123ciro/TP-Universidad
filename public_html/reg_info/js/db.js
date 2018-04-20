@@ -33,13 +33,13 @@ function startDB() {
         CargaDb();
     };
     dataBase.onerror = function (e) {
-       // alert('Error loading database');
+        // alert('Error loading database');
     };
 }
 //Funcion para Agregar datos 
 function add() {
-   
-   
+
+
     var active = dataBase.result;
     var data = active.transaction(["alumnos"], "readwrite");
     var object = data.objectStore("alumnos");
@@ -100,7 +100,6 @@ function CargaDb() {
                             <td>' + elements[key].cedula + '</td>\n\
                             <td>' + elements[key].nombre + '</td>\n\
                             <td>' + elements[key].apellido + '</td>\n\
-                            <td>' + elements[key].sexo + '</td>\n\
                             <td>' + elements[key].tipoestudio + '</td>\n\
                             <td>' + elements[key].cel + '</td> \n\
                             <td>\n\<button type="button" onclick="recuperar(' + elements[key].id + ')" class="btn btn-info">Edit</button>\n\
