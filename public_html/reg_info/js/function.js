@@ -112,5 +112,4 @@ $(document).ready(function () {
 function carga() {
   location.href="../index.html";
 
-
 }
