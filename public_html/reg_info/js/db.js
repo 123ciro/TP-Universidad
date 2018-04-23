@@ -96,14 +96,14 @@ function CargaDb() {
         for (var key in elements) {
             outerHTML += '\n\
                         <tr>\n\
-                            <td>' + elements[key].fecha_actual + '</td>\n\
-                            <td>' + elements[key].cedula + '</td>\n\
-                            <td>' + elements[key].nombre + '</td>\n\
-                            <td>' + elements[key].apellido + '</td>\n\
-                            <td>' + elements[key].tipoestudio + '</td>\n\
-                            <td>' + elements[key].cel + '</td> \n\
-                            <td>\n\<button type="button" onclick="recuperar(' + elements[key].id + ')" class="btn btn-info">Edit</button>\n\
-                            <td>\n\<button type="button" onclick="deletedate(' + elements[key].id + ')" class="btn btn-danger">Remove</button>\n\
+                            <td class="centrado">' + elements[key].fecha_actual + '</td>\n\
+                            <td class="centrado">' + elements[key].cedula + '</td>\n\
+                            <td class="centrado">' + elements[key].nombre + '</td>\n\
+                            <td class="centrado">' + elements[key].apellido + '</td>\n\
+                            <td class="centrado">' + elements[key].tipoestudio + '</td>\n\
+                            <td class="centrado">' + elements[key].cel + '</td> \n\
+                            <td>\n\<button type="button" style="font-size:12px" onclick="recuperar(' + elements[key].id + ')" class="btn btn-info centrado">Edit</button>\n\
+                            <td>\n\<button type="button" style="font-size:12px" onclick="deletedate(' + elements[key].id + ')" class="btn btn-danger centrado">Remove</button>\n\
                                                     </tr>';
         }
         elements = [];
