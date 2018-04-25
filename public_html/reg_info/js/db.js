@@ -70,7 +70,6 @@ function add() {
         document.querySelector('#cel').value = '';
         document.querySelector('#fecha_actual').value = '';
         $('#carga').fadeIn();
-
         $('#carga').fadeOut(3000);
         $('#cedula').focus();
         CargaDb();
@@ -187,6 +186,7 @@ function modificar(cedula) {
     ;
 }
 
+//Funcion que elimina los datos de la Base de Datos.
 function deletedate(id) {
     var active = dataBase.result;
     var data = active.transaction(["alumnos"], "readwrite");
@@ -194,6 +194,8 @@ function deletedate(id) {
     var request = object.delete(id);
     request.onsuccess = function () {
 
+
+        swal("Datos Eliminados");
         $("#cedula").focus();
         CargaDb();
     };
@@ -256,17 +258,5 @@ function BusquedaCiUsuario() {
             }
         }
         elements = [];
-    };
-}
-//Funcion que elimina los datos de la Base de Datos.
-function deletedateId(cedula) {
-    var active = dataBase.result;
-    var data = active.transaction(["alumnos"], "readwrite");
-    var object = data.objectStore("alumnos");
-    var request = object.delete(cedula);
-    request.onsuccess = function () {
-
-        $("#cedula").focus();
-        CargaDb();
     };
 }

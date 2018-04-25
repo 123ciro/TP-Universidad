@@ -80,3 +80,7 @@ td, th {
 .centrado{
     text-align: center;
 }
+.invalid-tooltip{
+    font-size: 12px;
+    position: static;
+}

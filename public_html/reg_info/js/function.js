@@ -20,8 +20,11 @@ $(document).ready(function () {
     $("#esconder").click(function () {
         $("#cargas").hide();
         $("#busquedaregistro").show();
-
     });
+
+
+//FUNCION DE SOLO LETRAS
+
 
 
     //para que aparezca la fecha actual
@@ -110,6 +113,7 @@ $(document).ready(function () {
 
 
 function carga() {
-  location.href="../index.html";
+    location.href = "../index.html";
 
 }
+
