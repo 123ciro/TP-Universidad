@@ -7,6 +7,13 @@ var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedD
 var dataBase = null;
 var recuperar;
 
+//avisa en caso que el nevagador no soperte IndexedDB
+
+if (!window.indexedDB) {
+    window.alert("Su navegador no soporta una versión estable de indexedDB. Tal y como las características no serán validas");
+}
+
+
 //En esta Funcion le ponemos el nombre a la base de datos y a la tabla con sus respectivos datos.
 
 function startDB() {
@@ -193,8 +200,6 @@ function deletedate(id) {
     var object = data.objectStore("alumnos");
     var request = object.delete(id);
     request.onsuccess = function () {
-
-
         swal("Datos Eliminados");
         $("#cedula").focus();
         CargaDb();
