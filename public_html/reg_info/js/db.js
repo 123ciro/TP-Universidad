@@ -179,6 +179,7 @@ function modificar(cedula) {
                 $("#modifi").fadeIn();
                 $("#modifi").fadeOut(3000);
                 $('#registrar').attr("disabled", false);
+                $('#editar').attr("disabled", true);
                 $('#cedula').attr("disabled", false);
                 CargaDb();
                 limpiarcampos();
